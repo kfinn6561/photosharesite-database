@@ -1,3 +1,4 @@
+USE photosharesite;
 
 DECLARE @ProcedureName AS VARCHAR(100)='SelectFiles'
 
