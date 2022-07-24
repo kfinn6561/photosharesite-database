@@ -1,17 +1,14 @@
-DECLARE @ProcedureName AS VARCHAR(100)='SelectFiles'
-
-
-DROP PROCEDURE IF EXISTS @ProcedureName;
+DROP PROCEDURE IF EXISTS SelectFiles;
 
 DELIMITER //
 
-CREATE PROCEDURE @ProcedureName()
+CREATE PROCEDURE SelectFiles()
 BEGIN
     select mf.Fileid, mf.URL, mf.UploadDate, u.IPAddress
     From MediaFiles mf
     left join
     Users u
 on mf.OwnerID=u.UserID;
-END
+END//
 
 DELIMITER ;
