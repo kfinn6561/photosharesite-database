@@ -31,6 +31,7 @@ namespace UpdateDatabase
             {
                 try
                 {
+                    Console.WriteLine("Running the following SQL command: " + sqlFile);
                     string sqlQuery = File.ReadAllText(sqlFile);
                     MySqlCommand cmd = new MySqlCommand(sqlQuery, conn);
                     cmd.ExecuteNonQuery();

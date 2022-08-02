@@ -16,6 +16,4 @@ UpdateDatabase/UpdateDatabase/obj/*
 UpdateDatabase/.vs/*
 
 ##Sensitive files
-*/photosharesite-58bfae020f3d.json
-*/backend-key.json
-*/secrets/*
+*secrets/*

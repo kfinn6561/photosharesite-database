@@ -1,7 +1,5 @@
 DROP PROCEDURE IF EXISTS InsertTestUser;
 
-DELIMITER //
-
 CREATE PROCEDURE InsertTestUser(
 ipaddress varchar(250)
 )
@@ -10,6 +8,4 @@ BEGIN
     (IPAddress)
     values
     (ipaddress);
-END//
-
-DELIMITER ;
+END;

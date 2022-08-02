@@ -4,3 +4,4 @@ procedures/InsertFile.sql
 procedures/InsertTestUser.sql
 procedures/InsertUser.sql
 procedures/SelectFiles.sql
+procedures/SelectUsers.sql
