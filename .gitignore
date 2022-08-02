@@ -1,0 +1,21 @@
+# JetBrains Rider
+.idea/
+*.sln.iml
+
+##
+## Visual Studio Code
+##
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+UpdateDatabase/UpdateDatabase/bin/*
+UpdateDatabase/UpdateDatabase/obj/*
+UpdateDatabase/.vs/*
+
+##Sensitive files
+*/photosharesite-58bfae020f3d.json
+*/backend-key.json
+*/secrets/*

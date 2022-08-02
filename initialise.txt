@@ -1,0 +1,6 @@
+tables/Users.sql
+tables/MediaFiles.sql
+procedures/InsertFile.sql
+procedures/InsertTestUser.sql
+procedures/InsertUser.sql
+procedures/SelectFiles.sql
