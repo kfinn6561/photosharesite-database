@@ -8,5 +8,5 @@ BEGIN
     (IPAddress)
     values
     (ipaddress);
-    SELECT LAST_INSERT_ID();
+    SELECT LAST_INSERT_ID() as ID;
 END;
