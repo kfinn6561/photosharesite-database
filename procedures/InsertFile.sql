@@ -1,12 +1,13 @@
 DROP PROCEDURE IF EXISTS InsertFile;
 
 CREATE PROCEDURE InsertFile(
-url varchar(250),
-ownerid int
+    fileName varchar(255),
+    url varchar(250),
+    ownerid int
 )
 BEGIN
     insert into MediaFiles
-    (URL, OwnerID)
+    (URL, FileName, OwnerID)
     values
-    (url, ownerid);    
+    (url, fileName, ownerid);    
 END;

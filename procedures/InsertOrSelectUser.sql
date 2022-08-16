@@ -1,21 +1,23 @@
 DROP PROCEDURE IF EXISTS InsertOrSelectUser;
 
 CREATE PROCEDURE InsertOrSelectUser(
-ipaddress varchar(250)
+NewIPAddress varchar(250)
 )
 BEGIN
-    select @UserID:=UserID
+    declare NewID int;
+	set NewID = NULL;
+    select `UserID` into NewID
     from Users
-    where IPAddress=ipaddress;
+    where `IPAddress`=NewIPAddress;
 
-    if @UserID is null
+    if NewID is null
     then
 
         insert into Users
-        (IPAddress)
+        (`IPAddress`)
         values
-        (ipaddress);
-        SELECT @UserID:=LAST_INSERT_ID();
+        (NewIPAddress);
+        SELECT LAST_INSERT_ID() into NewID;
     end if;
-    select @UserID as ID;
+    select NewID as ID;
 END;
