@@ -6,3 +6,5 @@ procedures/InsertUser.sql
 procedures/SelectFiles.sql
 procedures/SelectUsers.sql
 procedures/InsertOrSelectUser.sql
+procedures/DeleteFile.sql
+procedures/GetFile.sql
