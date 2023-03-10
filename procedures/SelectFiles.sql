@@ -1,5 +1,7 @@
 DROP PROCEDURE IF EXISTS SelectFiles;
 
+DELIMITER //
+
 CREATE PROCEDURE SelectFiles()
 BEGIN
     select mf.Fileid, mf.URL, mf.UploadDate, mf.FileName, u.IPAddress
@@ -7,4 +9,6 @@ BEGIN
     left join
     Users u
 on mf.OwnerID=u.UserID;
-END;
+END//
+
+DELIMITER ;

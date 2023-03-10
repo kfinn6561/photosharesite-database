@@ -1,5 +1,7 @@
 DROP PROCEDURE IF EXISTS InsertFile;
 
+DELIMITER //
+
 CREATE PROCEDURE InsertFile(
     fileName varchar(255),
     url varchar(250),
@@ -10,4 +12,6 @@ BEGIN
     (URL, FileName, OwnerID)
     values
     (url, fileName, ownerid);    
-END;
+END//
+
+DELIMITER ;

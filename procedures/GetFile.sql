@@ -1,5 +1,7 @@
 DROP PROCEDURE IF EXISTS GetFile;
 
+DELIMITER //
+
 CREATE PROCEDURE GetFile(
 FileID int
 )
@@ -10,4 +12,6 @@ BEGIN
     Users u
 on mf.OwnerID=u.UserID
 where mf.FileID=FileID;
-END;
+END//
+
+DELIMITER ;
