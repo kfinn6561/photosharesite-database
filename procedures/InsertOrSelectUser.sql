@@ -1,5 +1,7 @@
 DROP PROCEDURE IF EXISTS InsertOrSelectUser;
 
+DELIMITER //
+
 CREATE PROCEDURE InsertOrSelectUser(
 NewIPAddress varchar(250)
 )
@@ -20,4 +22,6 @@ BEGIN
         SELECT LAST_INSERT_ID() into NewID;
     end if;
     select NewID as ID;
-END;
+END//
+
+DELIMITER ;

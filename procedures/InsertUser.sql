@@ -1,5 +1,7 @@
 DROP PROCEDURE IF EXISTS InsertUser;
 
+DELIMITER //
+
 CREATE PROCEDURE InsertUser(
 ipaddress varchar(250)
 )
@@ -9,4 +11,6 @@ BEGIN
     values
     (ipaddress);
     SELECT LAST_INSERT_ID() as ID;
-END;
+END//
+
+DELIMITER ;
