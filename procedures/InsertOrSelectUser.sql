@@ -21,7 +21,7 @@ BEGIN
         (NewIPAddress);
         SELECT LAST_INSERT_ID() into NewID;
     end if;
-    select NewID as ID;
+    select NewID as UserID;
 END//
 
 DELIMITER ;
