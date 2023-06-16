@@ -4,9 +4,11 @@ DELIMITER //
 
 CREATE PROCEDURE SelectFiles()
 BEGIN
-    select Fileid, URL, FileName, OwnerID
-    From MediaFiles
-    order by UploadDate desc;
+    select mf.Fileid, mf.URL, mf.UploadDate, mf.FileName, u.IPAddress
+    From MediaFiles mf
+    left join
+    Users u
+on mf.OwnerID=u.UserID;
 END//
 
 DELIMITER ;
